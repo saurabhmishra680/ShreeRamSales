@@ -1,0 +1,219 @@
+/* Reset Styles */
+h1.heading{
+    text-align: center;
+    margin: 20px 0;
+    font-size: larger;
+    color: #005cbf;
+}
+
+/* Contact Page Section */
+.contact-page {
+    padding: 20px;
+}
+
+.container {
+    background-image: url("water.webp");
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Content */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Enables wrapping on smaller screens */
+    flex-direction: row; /* Ensure row layout for larger screens */
+}
+
+.form-section,
+.map-section {
+    flex: 1 1 45%; /* Takes 45% of space on larger screens */
+    min-width: 280px; /* Prevents sections from becoming too narrow */
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form .btn {
+    padding: 10px 20px;
+    background-color: #005cbf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form .btn:hover {
+    background-color: #003d80;
+}
+
+/* Map Section */
+.map-section iframe {
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Info Section */
+.info-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to the left for readability */
+    gap: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+    margin: 15px 0; /* Add spacing from other elements */ /* Stacks boxes on smaller screens */
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.info-box i {
+    font-size: 1.5rem;
+    color: #005cbf;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 1rem;
+}
+.contact-page .info-box a,
+.contact-page .info-box p {
+    font-size: 1rem;
+    word-break: break-word; /* Prevent content from overflowing */
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Make contact links (phone, email) more prominent */
+.contact-page .info-box a {
+    color: #005cbf; /* Use a consistent theme color for links */
+    font-weight: 500;
+}
+.spinner {
+    display: none;
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+/* Footer Styles */
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show Hamburger on Mobile */
+    }
+
+    .nav-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #005cbf;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+        opacity: 0; /* Hide with transparency */
+        visibility: hidden; /* Fully hide initially */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .nav-links.active {
+        display: flex;
+        opacity: 1; /* Make visible */
+        visibility: visible;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .logo {
+        flex: 1; /* Let logo occupy full width */
+    }
+    .service-card {
+        flex: 0 0 100%; /* Show one card at a time */
+    }
+    .feature-item img:hover {
+        transform: scale(1.1); /* Scale up the image slightly on hover */
+    }
+    .map-section {
+        order: 1; /* Map displayed in the middle */
+        flex: 1 1 45%; /* Side by side with contact info */
+    }
+    .contact-page .info-section {
+        padding: 15px;
+    }
+
+    .contact-page .info-box {
+        gap: 12px;
+    }
+
+    .contact-page .info-box i {
+        font-size: 1.25rem; /* Slightly smaller icons for mobile */
+    }
+
+    .contact-page .info-box a,
+    .contact-page .info-box p {
+        font-size: 0.95rem; /* Optimize font size for mobile readability */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
